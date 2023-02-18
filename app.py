@@ -30,7 +30,7 @@ app.layout = html.Div(children=[
         id='causes_of_death',
         figure=visuals.bar_causes_of_death
     )
-])
+], className='dashboard-contents')
 
 if __name__ == '__main__':
-    app.run()
+    app.run(debug = True)

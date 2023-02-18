@@ -1,6 +1,8 @@
 import numpy as np
 import pandas as pd
 import plotly.express as px
+import plotly.io as pio
+pio.templates.default = "simple_white"
 
 life_expectancy = pd.read_csv('data/life-expectancy-at-birth.csv')
 life_expectancy['year'] = pd.to_numeric(life_expectancy['year'])
