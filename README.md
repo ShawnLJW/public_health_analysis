@@ -1,4 +1,4 @@
-# public_health_analysis
+# Public Health Dashboard
 
  A Plotly Dash dashboard for analysing public health data in Singapore.
 
@@ -20,7 +20,7 @@ Next, run the dashbord with:
 python app.py
 ```
 
-Once app is running, visit [http://127.0.0.1:8050/] in your web browser.
+Once app is running, visit [http://127.0.0.1:8050/](http://127.0.0.1:8050/) in your web browser.
 
 ## Data Sources
 
