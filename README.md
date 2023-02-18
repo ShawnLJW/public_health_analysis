@@ -10,7 +10,7 @@ A suitable [conda](https://conda.io/) environment named `health_dashboard` can b
 and activated with:
 
 ```{shell}
-conda env create -f environment.yaml
+conda env create -f environment.yml
 conda activate health_dashboard
 ```
 
