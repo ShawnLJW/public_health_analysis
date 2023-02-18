@@ -9,10 +9,18 @@
 A suitable [conda](https://conda.io/) environment named `health_dashboard` can be created
 and activated with:
 
-```console
+```{shell}
 conda env create -f environment.yaml
 conda activate health_dashboard
 ```
+
+Next, run the dashbord with:
+
+```{shell}
+python app.py
+```
+
+Once app is running, visit [http://127.0.0.1:8050/] in your web browser.
 
 ## Data Sources
 
