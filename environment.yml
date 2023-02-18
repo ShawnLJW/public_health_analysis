@@ -1,0 +1,8 @@
+name: health_dashboard
+dependencies:
+  - numpy
+  - pandas
+  - plotly
+  - dash
+  - ipykernel
+  - nbformat
