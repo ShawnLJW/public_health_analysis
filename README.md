@@ -31,4 +31,6 @@ Once app is running, visit [http://127.0.0.1:8050/](http://127.0.0.1:8050/) in y
 2. Data.gov.sg
     - [Top 4 Conditions of Polyclinic Attendances](https://data.gov.sg/dataset/top-4-conditions-of-polyclinic-attendances)
     - [Number of Deaths and Top 10 Principal Causes](https://data.gov.sg/dataset/principal-causes-of-death)
-    - [Health Adjusted Life Expectancy at Birth](https://data.gov.sg/dataset/health-adjusted-life-expectancy)
+
+3. World Health Organization
+    - [Life expectancy and Healthy life expectancy](https://apps.who.int/gho/data/node.main.688)
