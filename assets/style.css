@@ -1,4 +1,10 @@
-.dashboard-contents {
-    width: 80%;
+#dashboard-contents {
+    width: 80vw;
     margin: auto;
+}
+
+.dual-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(186px , 1fr));
+    height: 50vh;
 }
