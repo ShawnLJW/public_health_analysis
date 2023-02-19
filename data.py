@@ -3,9 +3,9 @@ import pandas as pd
 
 
 def get_life_expectancy():
-    df = pd.read_csv('data/life-expectancy-at-birth.csv')
-    df['year'] = pd.to_numeric(df['year'])
-    df['hale_years'] = pd.to_numeric(df['hale_years'])
+    df = pd.read_csv('data/life_expectancy.csv')
+    selected_countries = ['Singapore', 'Malaysia', 'Indonesia','Republic of Korea','Japan','Norway','United Kingdom of Great Britain and Northern Ireland', 'United States of America']
+    df = df[df['country'].isin(selected_countries)]
     return df
 
 

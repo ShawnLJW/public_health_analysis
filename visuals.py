@@ -15,12 +15,17 @@ pio.templates.default = "simple_white"
 
 
 def plot_life_expectancy():
-    fig = px.line(life_expectancy, x='year', y='hale_years', color='sex',
-                  title='Life Expectancy is Increasing <br><sup>Life Expectancy at Birth</sup>')
-    fig.update_xaxes(title_text='')
+    fig = px.line(life_expectancy, x='year',y='hale_years',color='country',
+                  hover_name="country", hover_data={'country':False},
+                  title='<b style="color:red">Singapore</b> has the 2nd highest life expectancy in the the world<br><sup>Health-Adjusted Life Expectancies (Years) of Selected Countries Over Time</sup>')
+    fig.update_xaxes(title_text='', tickvals=list(range(2000,2020,5)))
     fig.update_yaxes(title_text='')
-    fig.update_layout(legend=dict(
-        title='', orientation='h', yanchor='top', y=1.1, xanchor='left', x=0))
+    fig.update_layout(showlegend=False)
+    for d in fig['data']:
+        if d['name'] == 'Singapore':
+            d['line']['color']='red'
+        else:
+            d['line']['color']='lightgrey'
     return fig
 
 def plot_ageing_population():
@@ -33,8 +38,7 @@ def plot_ageing_population():
 def plot_obesity_rate():
     fig = px.bar(obesity_rate, x='year', y='obesity_rate',
                             title='Obesity in Singapore <br><sup>% of Primary One Students Obese</sup>')
-    fig.update_xaxes(title_text='',
-                                tickvals=list(range(2013, 2023)))
+    fig.update_xaxes(title_text='', tickvals=list(range(2013, 2023)))
     fig.update_yaxes(visible=False)
 
     annotations = []
