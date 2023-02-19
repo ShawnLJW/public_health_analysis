@@ -15,7 +15,7 @@ def index():
 
         dcc.Graph(
             id='aging_population',
-            figure=plot_aging_population()
+            figure=plot_ageing_population()
         ),
 
         dcc.Graph(

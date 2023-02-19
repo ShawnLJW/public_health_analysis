@@ -23,9 +23,9 @@ def plot_life_expectancy():
         title='', orientation='h', yanchor='top', y=1.1, xanchor='left', x=0))
     return fig
 
-def plot_aging_population():
+def plot_ageing_population():
     fig = px.line(population_age, x='year', y='75 Years & Over',
-                  title='Aging Population in Singapore <br><sup>% of Singaporeans Aged 75 and Above</sup>')
+                  title='Ageing Population in Singapore <br><sup>% of Singaporeans Aged 75 and Above</sup>')
     fig.update_xaxes(title_text='', range=[1980, 2021])
     fig.update_yaxes(title_text='', tickformat=',.0%')
     return fig
