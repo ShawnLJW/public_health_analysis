@@ -1,36 +1,42 @@
-import visuals
+from visuals import *
 from dash import Dash, html, dcc
 
 app = Dash('health_dashboard')
 
-app.layout = html.Div(children=[
-    html.H1(children='How Healthy are Singaporeans?'),
 
-    dcc.Graph(
-        id='life_expectancy',
-        figure=visuals.line_life_expectancy
-    ),
+def index():
+    layout = html.Div(children=[
+        html.H1(children='How Healthy are Singaporeans?'),
 
-    dcc.Graph(
-        id='aging_population',
-        figure=visuals.line_aging_population
-    ),
+        dcc.Graph(
+            id='life_expectancy',
+            figure=plot_life_expectancy()
+        ),
 
-    dcc.Graph(
-        id='obesity_rate',
-        figure=visuals.bar_obesity_rate
-    ),
+        dcc.Graph(
+            id='aging_population',
+            figure=plot_aging_population()
+        ),
 
-    dcc.Graph(
-        id='conditions',
-        figure=visuals.line_conditions
-    ),
+        dcc.Graph(
+            id='obesity_rate',
+            figure=plot_obesity_rate()
+        ),
 
-    dcc.Graph(
-        id='causes_of_death',
-        figure=visuals.bar_causes_of_death
-    )
-], className='dashboard-contents')
+        dcc.Graph(
+            id='conditions',
+            figure=plot_conditions()
+        ),
+
+        dcc.Graph(
+            id='causes_of_death',
+            figure=plot_deaths()
+        )
+    ], className='dashboard-contents')
+    return layout
+
+
+app.layout = index()
 
 if __name__ == '__main__':
-    app.run(debug = True)
+    app.run(debug=True)
